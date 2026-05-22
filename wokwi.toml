@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+fp = "src/main.c"
+elf = "firmware.elf"
