@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-stm32f103c8",
+      "id": "mcu",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -120,
+      "left": 300,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -60,
+      "left": 300,
+      "attrs": { "value": "330" }
+    }
+  ],
+  "connections": [
+    ["mcu:PA0", "r1:1", "green", ["v"]],
+    ["r1:2", "led1:A", "green", ["v"]],
+    ["led1:C", "mcu:GND", "black", ["v"]]
+  ]
+}
